@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<!-- 나는 주석 key : 속성, "" : 속성 값 -->
+		
+	<entry key="save">
+	    INSERT
+		  INTO
+			   HOUSEPLANT
+		VALUES
+			   (
+			   SEQ_PLANT_NO.NEXTVAL
+		     , ?
+			 , ?
+			   )
+	</entry>
+	<!-- entry 탭의 키속성 값  -->
+	<entry key="view">
+	    SELECT
+			   PLANT_NO
+			 , PLANT_NAME	 
+		     , PLANT_TYPE
+		  FROM
+			   HOUSEPLANT
+		 ORDER
+			BY
+			   PLANT_NO ASC
+	</entry>
+	<entry key="edit">
+	    UPDATE
+			   HOUSEPLANT
+		   SET
+			   PLANT_NAME = ?
+			 , PLANT_TYPE = ?
+		 WHERE
+			   PLANT_NO = ?
+	</entry>
+	
+	<entry key="delete">
+	    DELETE
+			   FROM
+			   HOUSEPLANT
+		 WHERE
+			   PLANT_NO = ?  
+	</entry>
+	
+
+
+</properties>
